@@ -38,9 +38,7 @@
     "vue": "^3.3.0"
   },
   "dependencies": {
-    "@vueuse/core": "^10.11.0",
     "@vueuse/shared": "^10.11.0",
-    "maplibre-gl": "^4.5.1"
-
+    "mapbox-gl": "^3.5.2"
   }
 }

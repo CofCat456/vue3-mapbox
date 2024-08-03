@@ -1,7 +1,5 @@
-<script setup lang="ts">
-import { a } from 'vue-easy-mapbox'
-</script>
-
 <template>
-  <div>{{ a }}</div>
+  <main text="center gray-700 dark:gray-200" h-full w-full rounded-3xl font-sans>
+    <RouterView />
+  </main>
 </template>

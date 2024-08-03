@@ -1,7 +1,14 @@
 import { createApp } from 'vue'
-import './style.css'
+import { createRouter, createWebHistory } from 'vue-router/auto'
 import App from './App.vue'
 
-import 'vue-easy-mapbox/dist/index.css'
+import '@unocss/reset/tailwind.css'
+import './styles/main.css'
+import 'uno.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+})
+app.use(router)
+app.mount('#app')

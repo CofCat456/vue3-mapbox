@@ -19,7 +19,7 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library (Vue)
-      external: ['vue', 'maplibre-gl'],
+      external: ['vue', 'mapboxgl'],
       output: {
         // Provide global variables to use in the UMD build
         assetFileNames: (chunkInfo) => {

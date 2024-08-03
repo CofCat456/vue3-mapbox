@@ -1,3 +1,3 @@
-import 'maplibre-gl/dist/maplibre-gl.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
-export const a = 1
+export { default as MapBox } from './components/Mapbox.vue'
