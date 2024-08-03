@@ -1,0 +1,46 @@
+{
+  "name": "vue-easy-mapbox",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A Vue.js 3 Mapbox Library",
+  "author": "CofCat <a25690756@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/CofCat456/vue-easy-mapbox/tree/main/packages/vue-easy-mapbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CofCat456/vue-easy-mapbox"
+  },
+  "bugs": {
+    "url": "https://github.com/CofCat456/vue-easy-mapbox/issues"
+  },
+  "keywords": [],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "pub:release": "pnpm publish --access public"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/shared": "^10.11.0",
+    "maplibre-gl": "^4.5.1"
+
+  }
+}

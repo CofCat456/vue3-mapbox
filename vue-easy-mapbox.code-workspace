@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "packages/vue-easy-mapbox",
+      "name": "vue-easy-mapbox",
+    },
+    {
+      "path": "./playground",
+      "name": "playground",
+    },
+    {
+      "path": "./",
+      "name": "root",
+    }
+  ],
+  "settings": {
+  }
+}
