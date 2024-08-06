@@ -1,7 +1,7 @@
 {
   "name": "vue-easy-mapbox",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "description": "A Vue.js 3 Mapbox Library",
   "author": "CofCat <a25690756@gmail.com>",
   "license": "MIT",
