@@ -8,8 +8,8 @@ const { VITE_MAPBOX_TOKEN } = import.meta.env
 const { coords } = useGeolocation()
 
 const center = computed<[number, number]>(() => ([
-  coords.value.longitude === Infinity ? 0 : coords.value.longitude,
-  coords.value.latitude === Infinity ? 0 : coords.value.latitude,
+  coords.value.longitude === Infinity ? -71.224518 : coords.value.longitude,
+  coords.value.latitude === Infinity ? 42.213995 : coords.value.latitude,
 ]))
 </script>
 

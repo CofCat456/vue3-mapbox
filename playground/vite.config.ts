@@ -3,6 +3,7 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
@@ -32,6 +33,9 @@ export default defineConfig({
 
     // https://github.com/posva/unplugin-vue-router
     VueRouter(),
+
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
