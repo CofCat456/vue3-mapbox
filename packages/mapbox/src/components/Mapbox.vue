@@ -1,19 +1,55 @@
 <script setup lang="ts">
-import { shallowRef, watch } from 'vue'
+import { provide, shallowRef, watch } from 'vue'
 import type { MapOptions } from 'mapbox-gl'
 import { watchThrottled } from '@vueuse/shared'
 import { useCreateMapbox } from '../composable/useCreateMapbox'
 import type { MapboxOption } from '../type'
+import { mapSymbol } from '../shared'
 
 const props = withDefaults(defineProps<Partial<MapboxOption>>(), {
-  center: () => [-71.224518, 42.213995],
+  antialias: false,
+  attributionControl: true,
+  bearing: 0,
+  bearingSnap: 7,
+  boxZoom: true,
+  center: () => [0, 0],
+  clickTolerance: 3,
+  collectResourceTiming: false,
+  crossSourceCollisions: true,
+  doubleClickZoom: true,
+  dragPan: true,
+  dragRotate: true,
+  fadeDuration: 300,
+  failIfMajorPerformanceCaveat: false,
+  hash: false,
+  interactive: true,
+  keyboard: true,
+  logoPosition: 'bottom-left',
+  maxPitch: 85,
+  maxZoom: 22,
+  minPitch: 0,
+  minZoom: 0,
+  performanceMetricsCollection: true,
+  pitch: 0,
+  pitchWithRotate: true,
+  preserveDrawingBuffer: false,
+  projection: 'mercator',
+  refreshExpiredTiles: true,
+  renderWorldCopies: true,
+  respectPrefersReducedMotion: true,
+  scrollZoom: true,
   style: 'mapbox://styles/mapbox/streets-v12',
+  testMode: false,
+  touchPitch: true,
+  touchZoomRotate: true,
+  trackResize: true,
   zoom: 9,
 })
 
 const mapBoxEl = shallowRef<HTMLDivElement | null>(null)
 
 const { mapInstance } = useCreateMapbox(mapBoxEl, props as MapOptions)
+provide(mapSymbol, mapInstance)
 
 watch([
   () => props.zoom,
