@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import TheInput from '~/components/TheInput.vue'
-
 import { accessToken } from '~/composables'
 
 defineOptions({

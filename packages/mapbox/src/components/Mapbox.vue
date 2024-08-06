@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import { provide, shallowRef, watch } from 'vue'
 import type { MapOptions } from 'mapbox-gl'
+
 import { watchThrottled } from '@vueuse/shared'
-import { useCreateMapbox } from '../composable/useCreateMapbox'
+import { provide, shallowRef, watch } from 'vue'
+
 import type { MapboxOption } from '../type'
+
+import { useCreateMapbox } from '../composable/useCreateMapbox'
 import { mapSymbol } from '../shared'
 
 const props = withDefaults(defineProps<Partial<MapboxOption>>(), {

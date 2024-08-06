@@ -1,9 +1,12 @@
 import type { Ref } from 'vue'
-import { inject, ref } from 'vue'
+
 import { watchImmediate } from '@vueuse/shared'
 import { Marker } from 'mapbox-gl'
-import { mapSymbol } from '../shared'
+import { inject, ref } from 'vue'
+
 import type { MapboxMarkerOptions } from '../type'
+
+import { mapSymbol } from '../shared'
 
 type MapBoxComKey = 'Marker'
 

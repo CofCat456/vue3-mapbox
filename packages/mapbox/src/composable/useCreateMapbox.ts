@@ -1,9 +1,10 @@
+import type { MaybeRef, ShallowRef } from 'vue'
+
+import { clearUndefined } from '@antfu/utils'
 import { unrefElement } from '@vueuse/core'
 import { tryOnMounted, tryOnUnmounted } from '@vueuse/shared'
-import type { MaybeRef, ShallowRef } from 'vue'
-import { markRaw, shallowRef } from 'vue'
-import { clearUndefined } from '@antfu/utils'
 import mapboxgl, { type MapOptions } from 'mapbox-gl'
+import { markRaw, shallowRef } from 'vue'
 
 export interface UseCreateMapboxReturn {
   mapInstance: ShallowRef<mapboxgl.Map | null>
@@ -15,8 +16,8 @@ export function useCreateMapbox(target: MaybeRef<HTMLElement | null>, options?: 
   function init(target: HTMLElement) {
     const map = new mapboxgl.Map({
       ...(options ? clearUndefined({ ...options }) : {}),
-      container: target,
       accessToken: options?.accessToken,
+      container: target,
     })
 
     mapInstance.value = markRaw(map)
